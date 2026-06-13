@@ -1,6 +1,4 @@
-#include <iostream>
-#include <fstream>
-#include <vector>
+#include "input_file_check.h"
 
 int inputFileCheck() {
 
@@ -18,7 +16,7 @@ int inputFileCheck() {
         "characteristic chamber length {m}.txt"
     };
 
-    for(int i = 0; i < inputFilepaths.size(); i++)
+    for(int i = 0; i < (int)inputFilepaths.size(); i++)
     {
         std::ifstream gfile(inputFilepaths[i]);
         if (!gfile.is_open()) {

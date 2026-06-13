@@ -1,4 +1,4 @@
-#include "input_file_check.cpp"
+#include "input_file_check.h"
 
 int main() {
     /*
