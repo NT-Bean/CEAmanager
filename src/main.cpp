@@ -6,7 +6,7 @@ int main() {
         if you get a number in the one digit you effed up
         if you get a number in the tens digit just rerun it.
     */
-    int checkfile = inputFileCheck();
+    int checkfile = filecheck();
     if (checkfile >= 1) {
         std::cout << (checkfile);
         std::exit(0);

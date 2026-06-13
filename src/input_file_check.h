@@ -5,6 +5,6 @@
 #include <fstream>
 #include <vector>
 
-int inputFileCheck();
+int filecheck();
 
 #endif
