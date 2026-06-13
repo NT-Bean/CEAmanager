@@ -43,6 +43,9 @@ int main() {
     std::cout << "Molecular_Weight: " << molecular_weight << "\n";
     std::cout << "O-F Ratio: " << of_ratio << "\n";
     std::cout << "Thrust Wanted: " << thrust_wanted << "\n"; 
-    return 0;
 
+ 
+    
+    //test
+    return 0;
 }
