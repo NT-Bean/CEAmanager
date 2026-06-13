@@ -2,6 +2,11 @@
 #include <fstream>
 
 int filecheck() {
+        /*
+    this part just checks if thy files exist
+    if you get a number in the one digit you effed up
+    if you get a number in the tens digit just rerun it and give it an input.
+     */
  int value = 0;
     // gamma in
     std::ifstream gfile("./inputs/gamma.txt");
@@ -119,11 +124,9 @@ double numbercheck(){
 
 
 int main() {
-    /*
-    this part just checks if thy files exist
-    if you get a number in the one digit you effed up
-    if you get a number in the tens digit just rerun it and give it an input.
-     */
+
+
+
 int checkfile = filecheck();
 if (checkfile >= 1){
     std::cout << (checkfile);
