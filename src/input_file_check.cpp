@@ -125,22 +125,3 @@ double numbercheck(c){
 }
 
 
-int main() {
-
-
-
-int checkfile = filecheck();
-if (checkfile >= 1){
-    std::cout << (checkfile);
-    std::exit(0);
-}
-if (checkfile == 0){
-    std::cout << "Inputs Exist\n";
-}
-numbercheck();
-
-    return 0;
-
-//now make into value from thing
-
-}
