@@ -114,7 +114,7 @@ int filecheck() {
     return value;
 }
 // this part checks what the value of the file is and returns it 
-double numbercheck(c){
+double numbercheck(std::string c){
     std::string filename = c;
     std::ifstream file(filename);
     double value;
