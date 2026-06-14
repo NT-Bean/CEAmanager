@@ -49,5 +49,6 @@ int main() {
     // now we do the meth
     std::cout << "integration of sin from [0,3.14] equals " << integrate<double(*)(double)>(sin, 0.0, 3.14, 10000) << "\n";
 
+    std::cout << "you better not be skipping me" << "\n";
     return 0;
 }
