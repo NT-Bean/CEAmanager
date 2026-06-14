@@ -1,5 +1,5 @@
 #include "input_file_check.h"
-#include "Math_tools.h"
+#include "math_tools.h"
 
 int main() {
     /*
@@ -46,7 +46,8 @@ int main() {
     std::cout << "O-F Ratio: " << of_ratio << "\n";
     std::cout << "Thrust Wanted: " << thrust_wanted << "\n"; 
 
-     // now we do the meth 
+    // now we do the meth
+    std::cout << "integration of sin from [0,3.14] equals " << integrate<double(*)(double)>(sin, 0.0, 3.14, 10000) << "\n";
 
     return 0;
 }
