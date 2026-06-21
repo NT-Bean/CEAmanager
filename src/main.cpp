@@ -35,10 +35,10 @@ int main() {
     std::cout << "Thrust Wanted: " << thrust_wanted << "\n"; 
 
 
-    setStdOutPrecision(8);
+    MathTools::setStdOutPrecision(8);
 
     // now we do the meth
-    long double integralTest = integrate<double(*)(double)>(sin, 0.0, 3.14, 10000, true);
+    long double integralTest = MathTools::integrate<double(*)(double)>(sin, 0.0, 3.14, 10000, true);
     std::cout << "integral of sin(x) from 0 to 3.14 equals " << integralTest; 
 
     return 0;
