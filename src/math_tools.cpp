@@ -1,4 +1,3 @@
-// put math formulae here
 #include "math_tools.h"
 
 void MathTools::setStdOutPrecision(int decimalPlaces)
