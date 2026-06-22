@@ -5,9 +5,11 @@
 #include <fstream>
 #include <vector>
 
+#include "input.h"
+
 extern std::vector<std::string> ListofFilePaths;
 
-int filecheck();
+int filecheck(std::vector<Input> inputs);
 double numbercheck(std::string c);
 int handleFileErrors(int errorCode);
 

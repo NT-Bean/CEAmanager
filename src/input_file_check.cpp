@@ -1,20 +1,6 @@
-#include <iostream>
-#include <fstream>
-#include <vector>
+#include "input_file_check.h"
 
-std::vector<std::string> ListofFilePaths = {
-    "./inputs/ambient pressure {pa}.txt",
-    "./inputs/chamber pressure {pa}.txt",
-    "./inputs/chamber temp.txt",
-    "./inputs/characteristic chamber length {m}.txt",
-    "./inputs/gamma.txt",
-    "./inputs/Molecular weight.txt",
-    "./inputs/O-F ratio.txt",
-    "./inputs/thrust wanted {n}.txt",
-    "./inputs/exit temp.txt"
-};
-
-int filecheck() {
+int filecheck(std::vector<Input> inputs) {
         /*
     this part just checks if thy files exist and if not creates them
     if you get a number in the one digit you effed up
@@ -22,16 +8,16 @@ int filecheck() {
      */
     int value = 0;
 
-    for (int i = 0; i < ListofFilePaths.size(); i++)
+    for (int i = 0; i < (int)(inputs.size()); i++)
     {
-        std::ifstream gfile(ListofFilePaths[i]);
+        std::ifstream gfile(inputs[i].filepath);
         if (!gfile.is_open()) {
             std::cout << "File doesn't exist. Creating it.\n";
-            std::ofstream createFile(ListofFilePaths[i]);
-            value = value + 10;
+            std::ofstream createFile(inputs[i].filepath);
+            value += 10;
             if (!createFile.is_open()) {
                 std::cout << "Failed to create the file.\n";
-                value = value + 1;
+                value++;
             }
             
         }

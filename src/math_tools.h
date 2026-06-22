@@ -11,8 +11,8 @@ class MathTools
 {
     public:
 
-    static double universalGasConstant = 8.31446261815324;
-    static double pi = 3.14159265358979323846464338;
+    static double universalGasConstant;
+    static double pi;
 
     static void setStdOutPrecision(int decimalPlaces);
 
