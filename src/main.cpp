@@ -14,6 +14,9 @@ int main() {
     std::cin >> check;
     std::cout << check << "\n";
     // take files from list and turn them into numbers
+    int do_they_want_all = 0;;
+    std::cout << "1 for just dimension, 2 FOR ALL: ";
+    std::cin >> do_they_want_all;
 
     // case if user wants to load from file
     std::vector<Input> inputs;
@@ -58,11 +61,11 @@ int main() {
     }
 
 
-
-
     // now we do the math
     long double integralTest = MathTools::integrate<double(*)(double)>(sin, 0.0, 3.14, 10000, true);
     std::cout << "integral of sin(x) from 0 to 3.14 equals " << std::endl << integralTest; 
+
+
 
     // we do the velocity exit
    double velocity_exit = Formulae::find_velocity_exit(
@@ -86,12 +89,21 @@ int main() {
 
 
      // we print the results
+     //if = 1 then they get just dimensions
+     if (do_they_want_all == 1){
+    std::cout << double(throat_area) << std::endl << " The throat area in m^2\n"  << std::endl ;
+    std::cout << double(exit_area) << " The exit area in m^2\n"  << std::endl ;
+     }
+     //if = 2 then they get armaggedon
+     if (do_they_want_all == 2){
     std::cout << double(mass_flow) << std::endl << " The mass flow\n";
     std::cout << double(velocity_exit) << std::endl << " The exit velocity in m/s\n";
     std::cout << double(exit_mach) << std::endl << " The local Mach at the exit\n";
     std::cout << double(epsilon) << std::endl << " The expansion ratio from throat to exit\n";
     std::cout << double(throat_area) << std::endl << " The throat area in m^2\n"  << std::endl ;
     std::cout << double(exit_area) << " The exit area in m^2\n"  << std::endl ;
+     }
+
 
     if (throat_area > 1){
        std::cout << "that's a lil big there";
@@ -100,5 +112,4 @@ int main() {
     system("pause");
 
     return 0;
-    // 67 67
 }
